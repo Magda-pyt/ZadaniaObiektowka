@@ -2,7 +2,6 @@
 # Utwórz klasę Rectangle, która przechowuje:
 #
 # Długość i szerokość. Dodaj metody area() (oblicza pole) i perimeter() (oblicza obwód).
-from operator import length_hint
 
 
 class Rectangle:
