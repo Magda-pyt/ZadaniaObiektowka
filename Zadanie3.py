@@ -38,6 +38,9 @@ class Car:
                 f"Model: {self.__model}\n"
                 f"Rok produkcji: {self.__year}")
 
+    def __str__(self):
+        return self.get_car_info()
+
 
 if __name__ == "__main__":
     car1 = Car("Toyota", "Corolla", 2008)

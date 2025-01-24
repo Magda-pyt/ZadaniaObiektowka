@@ -23,16 +23,20 @@ class Cow(Animal):
     def make_sound(self):
         return "Mooo!"
 
-dog = Dog()
-cat = Cat()
-cow = Cow()
+
 
 def animal_sounds(animals: list) -> None:
     for animal in animals:
         print(animal.make_sound())
 
-print(animal_sounds([dog, cat, cow]))
+def main():
+    dog = Dog()
+    cat = Cat()
+    cow = Cow()
+    animal_sounds([dog, cat, cow])
 
+if __name__ == "__main__":
+    main()
 
 
 
