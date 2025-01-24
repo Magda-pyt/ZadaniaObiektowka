@@ -38,6 +38,9 @@ class Car:
                 f"Model: {self.__model}\n"
                 f"Rok produkcji: {self.__year}")
 
+    def __str__(self) -> str:
+        return self.get_car_info()
+
 
 if __name__ == "__main__":
     car1 = Car("Toyota", "Corolla", 2008)
@@ -53,5 +56,8 @@ if __name__ == "__main__":
     car1.set_year(2018)
     print(car1.get_year())
     print(car1.get_car_info())
-    print(car1)
 
+    # ta linijka zwróci coś takiego: <__main__.Car object at 0x106b07aa0>
+    # żeby zwróciła faktyczne dane o samochodzie w taki sam sposób jak "get_car_info",
+    # należy zaimplementować w klasie Car magiczną metodę __str__() - zrobiłem to ;)
+    print(car1)

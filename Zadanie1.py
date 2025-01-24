@@ -12,10 +12,15 @@ class Student:
         self.subjects = subjects
 
     def present_yourself(self):
-        return f"Jestem studentem. Nazywam się: {self.name} {self.surname}. I uczę sie nastepujących przedmiotów:\n{self.subjects}"
+        return (f"Jestem studentem. Nazywam się: {self.name} {self.surname}. I uczę sie nastepujących przedmiotów:\n"
+                f"{self.subjects}")
 
-    def add_subject(self, new_subject: str) -> list:
+    def add_subject(self, new_subject: str) -> None:
+        """
+        Funkcja dodaje przedmioty nauczania do listy przedmiotów studenta i nie zwraca żadnej wartości.
+        """
         self.subjects.append(new_subject)
+
 
 if __name__ == "__main__":
     student1 = Student("Ala", "Nowak", ["matematyka", "fizyka", "chemia"])
